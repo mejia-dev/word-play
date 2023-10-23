@@ -4,23 +4,17 @@ String.prototype.split()
 function convertToArray() {
   event.preventDefault();
   const formInput = document.getElementById("questionInput").value;
-  const firstArray = formInput.split();
-  // find any array element that is longer than 3 characters
+  const firstArray = formInput.split(" ");
   const newArray = firstArray.filter(word => word.length > 2);
-  
   reverseAndDisplay(newArray);
-
-  
-    
 }
 
 function reverseAndDisplay(input) {
   let reversedArray = input.reverse();
   const resultDiv = document.getElementById("result");
   const resultText = document.createElement("p");
-  resultText.textContent = reversedArray.join 
-  resultDiv.innerHTML = '';
-  resultDiv.appendChild(resultText);
+  resultText.append(reversedArray);
+  resultDiv.append(resultText);
 };
 
 window.addEventListener("load", function() {
