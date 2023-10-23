@@ -18,8 +18,9 @@ function reverseAndDisplay(input) {
   let reversedArray = input.reverse();
   const resultDiv = document.getElementById("result");
   const resultText = document.createElement("p");
-  resultText.append(reversedArray);
-  resultDiv.append(resultText);
+  resultText.textContent = reversedArray.join 
+  resultDiv.innerHTML = '';
+  resultDiv.appendChild(resultText);
 };
 
 window.addEventListener("load", function() {
