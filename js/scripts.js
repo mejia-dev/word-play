@@ -1,16 +1,17 @@
+
 String.prototype.split()
 
 function convertToArray() {
-  // get input
-  // split into array
+  event.preventDefault();
+  const formInput = document.getElementById("questionInput").value;
+  const firstArray = formInput.split();
   // find any array element that is longer than 3 characters
-  // add results to newArray
-  // call reverseAndDisplay(newArray)
+  const newArray = firstArray.filter(word => word.length > 2);
+  
+  reverseAndDisplay(newArray);
 
-words.forEach(word =>3 {
-    wordLengths.push;
-}
-
+  
+    
 }
 
 function reverseAndDisplay(input) {
@@ -21,8 +22,6 @@ function reverseAndDisplay(input) {
   resultDiv.append(resultText);
 };
 
-
-
 window.addEventListener("load", function() {
-  this.document.getElementById("questionInput").addEventListener("submit", convertToArray);
+  this.document.getElementById("sentenceForm").addEventListener("submit", convertToArray);
 });
